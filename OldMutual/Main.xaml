@@ -1,0 +1,439 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,2441.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,2376.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Input\AKUHN SOA_.xlsx" Name="strSatementOfAccountFilePath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRemittanceData" />
+      <Variable x:TypeArguments="x:String" Default="Input\FilteredRemittance.xlsx" Name="strFilteredFilePath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSourceStatement" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInvMatchedData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInvNotMatchedData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtPartiallyPaid" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtFullyPaid" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtDuplicateInvRemittance" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInvoicesRemittance" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaims" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllInvNotMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllInvMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInpatientClaims" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRejected" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtBenefitsExhausted" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvoiceMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvoiceNotMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtExceptionInvoiceMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtExceptionInvoiceNotMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSmartReport" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtReversedData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSummary" />
+      <Variable x:TypeArguments="x:String" Name="strBenefitsTotalSum" />
+      <Variable x:TypeArguments="x:String" Name="strRemittanceTotal" />
+      <Variable x:TypeArguments="x:Double" Name="strUntracedTotal" />
+      <Variable x:TypeArguments="x:String" Name="strOMETotalSum" />
+      <Variable x:TypeArguments="x:String" Name="strDecMissingDocTotal" />
+      <Variable x:TypeArguments="x:String" Name="strDecNonClinicalTotal" />
+      <Variable x:TypeArguments="x:String" Name="strDecMiscTotal" />
+      <Variable x:TypeArguments="x:Double" Name="strPaidKETotal" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtDecMissingDoc" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtDecNonClinical" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtDecMisc" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOvrAllClmInvNotMatchedData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtValidOverAllClaimsData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverallClaimsInvNotEmpty" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaimInvoiceEmpty" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtOACNotMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtVsOACData" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtOACMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOACMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSOA" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtStatementOfSummary" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtInvNotMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaims_Valid" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllNotMatched" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvAmtMatched" />
+      <Variable x:TypeArguments="x:String" Name="BenefitsTotalSum" />
+      <Variable x:TypeArguments="x:Double" Name="PaidKETotal" />
+      <Variable x:TypeArguments="x:String" Name="DecMiscTotal" />
+      <Variable x:TypeArguments="x:Double" Name="DecNonClinicalTotal" />
+      <Variable x:TypeArguments="x:String" Name="DecMissingDocTotal" />
+      <Variable x:TypeArguments="x:String" Name="RemittanceTotal" />
+      <Variable x:TypeArguments="x:String" Name="OMETotalSum" />
+      <Variable x:TypeArguments="x:Double" Name="dblUntracedTotal" />
+      <Variable x:TypeArguments="x:String" Name="strReqStatusTotal" />
+      <Variable x:TypeArguments="x:Double" Name="dblReqStatusTotal" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtValidOverallClaims" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copy Filter Data Templates to Input Folder" DisplayName="WorkFlow Files\seqCopyFilteredTemplates.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="WorkFlow Files\seqCopyFilteredTemplates.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InvokeWorkflowFile>
+    <ui:BuildDataTable DataTable="[dtSummary]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="449.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Summary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OM_x0020_Ins&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;AKUHN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid KE&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements(sheet 3)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid SS&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;To be paid&lt;/Summary&gt;&#xA;    &lt;Description&gt;Processed to be paid(Integrated claims)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;OMLKE to deal&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMLKE to rectify/Deal(Sheet2)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Benefits&lt;/Summary&gt;&#xA;    &lt;Description&gt;Clients who have exceeded their Limits. Payable if on Smart(sheet 3&amp;amp;4)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Resubmitted claims&lt;/Summary&gt;&#xA;    &lt;Description&gt;Barcoded claims to be processed&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Untraced Bills&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provide invoice copies if smart ran(sheet 5&amp;amp;6)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet8)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Non Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet9)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Missing Documentation&lt;/Summary&gt;&#xA;    &lt;Description&gt;Additional documents or information Required(sheet7)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Miscellaneous&lt;/Summary&gt;&#xA;    &lt;Description&gt;Miscellaneous Information&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Rwanda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMRW for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Uganda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMUG for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Sudan&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMSS for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Recoveries&lt;/Summary&gt;&#xA;    &lt;Description&gt;Duplicate or erroneous payment made to the provider to be recovered&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Write offs&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provider to write off amounts&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Total&lt;/Summary&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Delay sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_3">
+      <InArgument x:TypeArguments="x:TimeSpan">
+        <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="00:00:05" />
+      </InArgument>
+    </Delay>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InvNumUpdate_Remittance_OAC_Smart.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WorkFlow Files\InvNumUpdate_Remittance_OAC_Smart.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtOverallClaims_Valid">[dtOverAllClaims_Valid]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFilteredRemittanceData">[dtRemittanceData]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Filter_StatementOfAccountReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WorkFlow Files\Filter_StatementOfAccountReport.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtSOA">[dtSOA]</OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRemittanceData">[dtRemittanceData]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtStatementOfSummary">[dtStatementOfSummary]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtValidOverAllClaims">[dtValidOverallClaims]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_23" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RemittanceMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WorkFlow Files\RemittanceMatchStatus.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtStatement">[dtStatementOfSummary]</InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllClaimsValid">[dtValidOverallClaims]</InOutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRemittanceData">[dtRemittanceData]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtRmtInvNotMatched">[dtRmtInvNotMatched]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="OverAllClaimsMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="OverAllClaimsMatchStatus.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRmtInvNotMatched">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtRmtInvNotMatched" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllClaims_Valid">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtValidOverallClaims" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtOverAllNotMatched">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtOverAllNotMatched" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtDecMisc">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtDecMisc" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtDecNonClinical">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtDecNonClinical" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtDecMissingDoc">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtDecMissingDoc" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtBenefitsExhausted">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtBenefitsExhausted" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Sequence DisplayName="Output_SmartReport_Sequence" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_96">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SmartReportMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SmartReportMatchStatus.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllNotMatched">[dtOverAllNotMatched]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartInvoiceNotMatched">[dtSmartInvoiceNotMatched]</OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartInvAmtMatched">[dtSmartInvAmtMatched]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="Output_ExceptionReport_Sequence" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_97">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExceptionReportMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="ExceptionReportMatchStatus.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartInvoiceNotMatched">[dtSmartInvoiceNotMatched]</InArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtExceptionInvoiceNotMatched">[dtExceptionInvoiceNotMatched]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="Create Pivot Sequence" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_101">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreatePivotTables.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="CreatePivotTables.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtBenefitsExhausted">[dtBenefitsExhausted]</InArgument>
+          <OutArgument x:TypeArguments="x:Double" x:Key="out_strPaidKETotal">[PaidKETotal]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strBenefitsTotalSum">[BenefitsTotalSum]</OutArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtDecMissingDoc">[dtDecMissingDoc]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtDecNonClinical">[dtDecNonClinical]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtDecMisc">[dtDecMisc]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strDecMiscTotal">[DecMiscTotal]</OutArgument>
+          <OutArgument x:TypeArguments="x:Double" x:Key="out_strDecNonClinicalTotal">[DecNonClinicalTotal]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strDecMissingDocTotal">[DecMissingDocTotal]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strRemittanceTotal">[RemittanceTotal]</OutArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartInvAmtMatched">[dtSmartInvAmtMatched]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strOMETotalSum">[OMETotalSum]</OutArgument>
+          <OutArgument x:TypeArguments="x:Double" x:Key="out_strUntracedTotal">[dblUntracedTotal]</OutArgument>
+          <OutArgument x:TypeArguments="x:Double" x:Key="out_strReqStatusTotal">[dblReqStatusTotal]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_20" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - Summary" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,7746.4" sap2010:WorkflowViewState.IdRef="Sequence_56">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,7634.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" WorkbookPath="Output\StatementSummary.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,7364.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Benefits OM&quot;)]" DisplayName="Write DataTable to Excel Benefits OM" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dtBenefitsExhausted]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Untraced Bills&quot;)]" DisplayName="Write DataTable to Excel Untraced Bills" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[dtExceptionInvoiceNotMatched]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Declines - Miscellaneous&quot;)]" DisplayName="Write DataTable to Excel miscellaneous" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[dtDecMisc]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Declines - Missing Doc&quot;)]" DisplayName="Write DataTable to Excel Declines - Missing Documentation" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_5" IgnoreEmptySource="False" Source="[dtDecMissingDoc]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Declines - Non Clinical&quot;)]" DisplayName="Write DataTable to Excel Declines - Non Clinical" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_6" IgnoreEmptySource="False" Source="[dtDecNonClinical]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Summary&quot;).Range(&quot;D10&quot;)]" DisplayName="Write DataTable to Excel Summary" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dtSummary]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E9&quot;)]" DisplayName="Write Cell Summary Header" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_13" Value="[&quot;AKUHN /OM STATEMENT AS AT JAN-DEC.YR XXXX&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G15&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[BenefitsTotalSum]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[OMETotalSum]" />
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,272" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G11&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[RemittanceTotal]" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[dblUntracedTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[DecMissingDocTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[DecNonClinicalTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G11&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_14" Value="[PaidKETotal]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteCellX>
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_12" Value="[DecMiscTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_32" Value="[dblReqStatusTotal]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_33" Value="[OMETotalSum]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[&quot;=SUM(E11:E26)&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_10" Value="[&quot;=SUM(F11:F26)&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_11" Value="[&quot;=SUM(G11:G26)&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E11&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_15" Value="[&quot;=F11+G11&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_16" Value="[&quot;=F12+G12&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E13&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_17" Value="[&quot;=F13+G13&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_18" Value="[&quot;=F14+G14&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E15&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_19" Value="[&quot;=F15+G15&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E16&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_20" Value="[&quot;=F16+G16&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_21" Value="[&quot;=F17+G17&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_22" Value="[&quot;=F18+G18&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_23" Value="[&quot;=F19+G19&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_24" Value="[&quot;=F20+G20&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_25" Value="[&quot;=F21+G21&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_26" Value="[&quot;=F22+G22&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E23&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_27" Value="[&quot;=F23+G23&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E24&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_28" Value="[&quot;=F24+G24&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E25&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_29" Value="[&quot;=F25+G25&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E26&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_30" Value="[&quot;=F26+G26&quot;]" />
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_31" Value="[&quot;=F27+G27&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_29" InstanceCachePeriod="3000" WorkbookPath="Output\RemittanceMatchStatus.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,1189.6" sap2010:WorkflowViewState.IdRef="Sequence_105">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,1077.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_28" InstanceCachePeriod="3000" WorkbookPath="Input\FilteredStatementOfAccount.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,968" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelWriteCell Cell="R1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_53" SheetName="Statement" Text="Comments" />
+                    <ui:ExcelWriteCell Cell="S1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_54" SheetName="Statement" Text="Paid" />
+                    <ui:ExcelWriteCell Cell="T1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_55" SheetName="Statement" Text="Variance" />
+                    <ui:ExcelWriteCell Cell="U1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_56" SheetName="Statement" Text="Other Comments" />
+                    <ui:ExcelWriteCell Cell="[&quot;S2:S&quot;+(dtSOA.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_57" SheetName="Statement" Text="[&quot;=IF(ISNA(VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$Q,16,FALSE)),&quot;&quot;AmountNotFound&quot;&quot;,VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$Q,16,FALSE))&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;T2:T&quot;+(dtSOA.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_58" SheetName="Statement" Text="[&quot;=IFERROR(L2-S2,&quot;&quot;NA&quot;&quot;)&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;U2:U&quot;+(dtSOA.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_59" SheetName="Statement" Text="[&quot;=IF(ISNA(VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$P,15,FALSE)),&quot;&quot;NA&quot;&quot;,VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$P,15,FALSE))&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+            </ui:ExcelApplicationScope>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="449.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
+  </Sequence>
+</Activity>
