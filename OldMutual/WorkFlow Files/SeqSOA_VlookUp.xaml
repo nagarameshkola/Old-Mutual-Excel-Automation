@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>860,2536</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,2443.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SeqSOA_VlookUp_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +115,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SeqSOA_VlookUp" sap:VirtualizedContainerService.HintSize="545.6,2471.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SeqSOA_VlookUp" sap:VirtualizedContainerService.HintSize="545.6,2378.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtFilteredSOA" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtValidOverAllClaims" />
@@ -475,92 +475,6 @@ Select dtValida_BuildDataTable.Rows.Add({d.Field(Of Object)("Group"),d.Field(Of 
         <InArgument x:TypeArguments="sd:DataTable">[dtValida_BuildDataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="483.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="473.6,777.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtValidOverAllClaims]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="411.2,665.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-            <ui:ForEachRow.Body>
-              <ActivityAction x:TypeArguments="sd:DataRow">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,477.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtFilteredSOA]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="334.4,295.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_7" LookupColumnName="Invoice No" LookupValue="[CurrentRow(&quot;InvNum&quot;).ToString]" TargetColumnName="Ar Amount">
-                    <ui:LookupDataTable.CellValue>
-                      <OutArgument x:TypeArguments="ui:GenericValue">[strArAmount]</OutArgument>
-                    </ui:LookupDataTable.CellValue>
-                  </ui:LookupDataTable>
-                  <If Condition="[String.IsNullOrEmpty(strArAmount)]" sap:VirtualizedContainerService.HintSize="334.4,52.8" sap2010:WorkflowViewState.IdRef="If_6">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("Ar Amount")]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Object">[""]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_14">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("Ar Amount")]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="ui:GenericValue">[strArAmount]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachRow.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:ForEachRow>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,309.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Input\FilteredOverAllClaims.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">

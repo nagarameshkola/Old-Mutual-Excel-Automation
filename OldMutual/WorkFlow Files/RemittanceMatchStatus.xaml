@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>860,3018.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,2925.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RemittanceMatchStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -120,7 +120,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="RemittanceMatchStatus" sap:VirtualizedContainerService.HintSize="496,2953.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="RemittanceMatchStatus" sap:VirtualizedContainerService.HintSize="496,2860.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtRemittance_InvMatched" />
       <Variable x:TypeArguments="x:String" Name="strRemittanceAmt" />
@@ -721,155 +721,6 @@ Select dtValida_BuildDataTable.Rows.Add({d.Field(Of Object)("Group"),d.Field(Of 
         <InArgument x:TypeArguments="sd:DataTable">[dtValida_BuildDataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,164.8" sap2010:WorkflowViewState.IdRef="Sequence_24">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dtOverAllClaimsValid]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-            <ui:ForEachRow.Body>
-              <ActivityAction x:TypeArguments="sd:DataRow">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,1134.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="strOverallClaimInvMatchvsPartiallyPaid" />
-                    <Variable x:TypeArguments="x:String" Name="strOverallClaimInvMatchvsInvNotMatched" />
-                  </Sequence.Variables>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtPartiallyPaid]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="510.4,52.8" sap2010:WorkflowViewState.IdRef="LookupDataTable_5" LookupColumnName="Invoice No" LookupValue="[CurrentRow(&quot;InvNum&quot;).ToString]" TargetColumnName="Invoice No">
-                    <ui:LookupDataTable.CellValue>
-                      <OutArgument x:TypeArguments="x:String">[strOverallClaimInvMatchvsPartiallyPaid]</OutArgument>
-                    </ui:LookupDataTable.CellValue>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:LookupDataTable>
-                  <If Condition="[String.IsNullOrEmpty(strOverallClaimInvMatchvsPartiallyPaid)]" sap:VirtualizedContainerService.HintSize="510.4,52.8" sap2010:WorkflowViewState.IdRef="If_4">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("InvVsPartiallyPaidRemittance")]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Object">["InvoiceNotMatched"]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("InvVsPartiallyPaidRemittance")]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Object">["InvoiceMatched"]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[dtRmtInvNotMatched]" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="510.4,295.2" sap2010:WorkflowViewState.IdRef="LookupDataTable_7" LookupColumnName="Invoice No" LookupValue="[CurrentRow(&quot;InvNum&quot;).ToString]" TargetColumnName="Invoice No">
-                    <ui:LookupDataTable.CellValue>
-                      <OutArgument x:TypeArguments="x:String">[strOverallClaimInvMatchvsInvNotMatched]</OutArgument>
-                    </ui:LookupDataTable.CellValue>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:LookupDataTable>
-                  <If Condition="[String.IsNullOrEmpty(strOverallClaimInvMatchvsInvNotMatched)]" sap:VirtualizedContainerService.HintSize="510.4,524" sap2010:WorkflowViewState.IdRef="If_6">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,170.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_15">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("InvNumStatus")]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Object">["InvoiceNotMatched"]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,170.4" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_16">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:Object">[CurrentRow.Item("InvNumStatus")]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:Object">["InvoiceMatched"]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEachRow.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:ForEachRow>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_5" InstanceCachePeriod="3000" WorkbookPath="Input\FilteredOverAllClaims.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">

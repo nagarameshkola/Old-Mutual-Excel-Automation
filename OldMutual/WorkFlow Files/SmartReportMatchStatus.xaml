@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>860,3471.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,3378.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SmartReportMatchStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,7 +106,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SmartReportMatchStatus" sap:VirtualizedContainerService.HintSize="649.6,3406.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SmartReportMatchStatus" sap:VirtualizedContainerService.HintSize="649.6,3313.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvoiceMatched" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvAmtNotMatched" />
@@ -116,37 +116,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="587.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,328" sap2010:WorkflowViewState.IdRef="Sequence_13">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:ReadRange AddHeaders="True" DataTable="[in_dtOverAllNotMatched]" DisplayName="Read Range Workbook ValidOverAllClaims" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="OverAll_InvNotMatched" WorkbookPath="Output\OverallClaimMatchStatus.xlsx">
-            <ui:ReadRange.Range>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
-              </InArgument>
-            </ui:ReadRange.Range>
-          </ui:ReadRange>
-          <ui:ReadRange AddHeaders="True" DataTable="[in_dtSmartReport]" DisplayName="Read Range Workbook Smart Report" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="Input\UAP smart report Nov - June 6th 2023.xlsx">
-            <ui:ReadRange.Range>
-              <InArgument x:TypeArguments="x:String">
-                <Literal x:TypeArguments="x:String" Value="" />
-              </InArgument>
-            </ui:ReadRange.Range>
-          </ui:ReadRange>
-        </Sequence>
-      </ui:CommentOut.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
     <ui:FilterDataTable DataTable="[in_dtOverAllNotMatched]" DisplayName="Filter Data Table - Smart Inv Matched" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="587.2,52.8" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtSmartInvoiceMatched]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">

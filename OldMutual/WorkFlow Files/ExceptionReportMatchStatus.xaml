@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>860,756</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,938.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExceptionReportMatchStatus_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExceptionReportMatchStatus" sap:VirtualizedContainerService.HintSize="496,691.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExceptionReportMatchStatus" sap:VirtualizedContainerService.HintSize="496,873.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtException" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtExceptionInvoiceMatched" />
@@ -174,6 +174,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Exception Report Match Status Excel Created in Ouput Folder&quot;]" />
     <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_dblUntracedTotal]</OutArgument>
