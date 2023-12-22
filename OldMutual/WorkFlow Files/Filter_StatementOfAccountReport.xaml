@@ -4,6 +4,8 @@
     <x:Property Name="in_dtRemittanceData" Type="InArgument(sd:DataTable)" />
     <x:Property Name="out_dtStatementOfSummary" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="out_dtValidOverAllClaims" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_dtSmartReport" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_dtExceptionalReport" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -139,6 +141,12 @@
         </OutArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtValidOverAllClaims">
           <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="out_dtValidOverAllClaims" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartReport">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="out_dtSmartReport" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtExceptionalReport">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="out_dtExceptionalReport" />
         </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

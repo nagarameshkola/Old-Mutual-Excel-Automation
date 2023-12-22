@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,2441.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,9621.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -105,74 +105,41 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,2376.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="688,9556.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="Input\AKUHN SOA_.xlsx" Name="strSatementOfAccountFilePath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtRemittanceData" />
-      <Variable x:TypeArguments="x:String" Default="Input\FilteredRemittance.xlsx" Name="strFilteredFilePath" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtSourceStatement" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtInvMatchedData" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtInvNotMatchedData" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtPartiallyPaid" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtFullyPaid" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtDuplicateInvRemittance" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtInvoicesRemittance" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaims" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllInvNotMatched" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllInvMatched" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtInpatientClaims" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtRejected" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtBenefitsExhausted" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvoiceMatched" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvoiceNotMatched" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtExceptionInvoiceMatched" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtExceptionInvoiceNotMatched" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartReport" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtReversedData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSummary" />
-      <Variable x:TypeArguments="x:String" Name="strBenefitsTotalSum" />
-      <Variable x:TypeArguments="x:String" Name="strRemittanceTotal" />
-      <Variable x:TypeArguments="x:Double" Name="strUntracedTotal" />
-      <Variable x:TypeArguments="x:String" Name="strOMETotalSum" />
-      <Variable x:TypeArguments="x:String" Name="strDecMissingDocTotal" />
-      <Variable x:TypeArguments="x:String" Name="strDecNonClinicalTotal" />
-      <Variable x:TypeArguments="x:String" Name="strDecMiscTotal" />
-      <Variable x:TypeArguments="x:Double" Name="strPaidKETotal" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtDecMissingDoc" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtDecNonClinical" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtDecMisc" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOvrAllClmInvNotMatchedData" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtValidOverAllClaimsData" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOverallClaimsInvNotEmpty" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaimInvoiceEmpty" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtOACNotMatched" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtVsOACData" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtRmtOACMatched" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOACMatched" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSOA" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtStatementOfSummary" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtRmtInvNotMatched" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaims_Valid" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllNotMatched" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtSmartInvAmtMatched" />
       <Variable x:TypeArguments="x:String" Name="BenefitsTotalSum" />
-      <Variable x:TypeArguments="x:Double" Name="PaidKETotal" />
+      <Variable x:TypeArguments="x:String" Name="strPaidKETotal" />
       <Variable x:TypeArguments="x:String" Name="DecMiscTotal" />
-      <Variable x:TypeArguments="x:Double" Name="DecNonClinicalTotal" />
+      <Variable x:TypeArguments="x:String" Name="DecNonClinicalTotal" />
       <Variable x:TypeArguments="x:String" Name="DecMissingDocTotal" />
       <Variable x:TypeArguments="x:String" Name="RemittanceTotal" />
       <Variable x:TypeArguments="x:String" Name="OMETotalSum" />
-      <Variable x:TypeArguments="x:Double" Name="dblUntracedTotal" />
-      <Variable x:TypeArguments="x:String" Name="strReqStatusTotal" />
+      <Variable x:TypeArguments="x:String" Name="dblUntracedTotal" />
       <Variable x:TypeArguments="x:Double" Name="dblReqStatusTotal" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtValidOverallClaims" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtExceptionalReport" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtOverAllClaims_Valid" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copy Filter Data Templates to Input Folder" DisplayName="WorkFlow Files\seqCopyFilteredTemplates.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="WorkFlow Files\seqCopyFilteredTemplates.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Copy Filter Data Templates to Input Folder" DisplayName="WorkFlow Files\seqCopyFilteredTemplates.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="WorkFlow Files\seqCopyFilteredTemplates.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
@@ -182,36 +149,65 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:BuildDataTable DataTable="[dtSummary]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="449.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Summary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OM_x0020_Ins&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;AKUHN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid KE&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements(sheet 3)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid SS&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;To be paid&lt;/Summary&gt;&#xA;    &lt;Description&gt;Processed to be paid(Integrated claims)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;OMLKE to deal&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMLKE to rectify/Deal(Sheet2)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Benefits&lt;/Summary&gt;&#xA;    &lt;Description&gt;Clients who have exceeded their Limits. Payable if on Smart(sheet 3&amp;amp;4)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Resubmitted claims&lt;/Summary&gt;&#xA;    &lt;Description&gt;Barcoded claims to be processed&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Untraced Bills&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provide invoice copies if smart ran(sheet 5&amp;amp;6)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet8)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Non Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet9)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Missing Documentation&lt;/Summary&gt;&#xA;    &lt;Description&gt;Additional documents or information Required(sheet7)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Miscellaneous&lt;/Summary&gt;&#xA;    &lt;Description&gt;Miscellaneous Information&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Rwanda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMRW for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Uganda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMUG for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Sudan&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMSS for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Recoveries&lt;/Summary&gt;&#xA;    &lt;Description&gt;Duplicate or erroneous payment made to the provider to be recovered&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Write offs&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provider to write off amounts&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Total&lt;/Summary&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Delay sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_3">
+    <ui:BuildDataTable DataTable="[dtSummary]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="625.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Summary&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OM_x0020_Ins&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;AKUHN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid KE&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements(sheet 3)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Paid SS&lt;/Summary&gt;&#xA;    &lt;Description&gt;Amounts are Paid, Knock off the statements&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;To be paid&lt;/Summary&gt;&#xA;    &lt;Description&gt;Processed to be paid(Integrated claims)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;OMLKE to deal&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMLKE to rectify/Deal(Sheet2)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Benefits&lt;/Summary&gt;&#xA;    &lt;Description&gt;Clients who have exceeded their Limits. Payable if on Smart(sheet 3&amp;amp;4)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Resubmitted claims&lt;/Summary&gt;&#xA;    &lt;Description&gt;Barcoded claims to be processed&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Untraced Bills&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provide invoice copies if smart ran(sheet 5&amp;amp;6)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet8)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Non Clinical&lt;/Summary&gt;&#xA;    &lt;Description&gt;Non Payable Amounts, Refer to statement for details(sheet9)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Missing Documentation&lt;/Summary&gt;&#xA;    &lt;Description&gt;Additional documents or information Required(sheet7)&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Decline-Miscellaneous&lt;/Summary&gt;&#xA;    &lt;Description&gt;Miscellaneous Information&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Rwanda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMRW for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Uganda&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMUG for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Sudan&lt;/Summary&gt;&#xA;    &lt;Description&gt;OMKE to follow up with OMSS for payment&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Recoveries&lt;/Summary&gt;&#xA;    &lt;Description&gt;Duplicate or erroneous payment made to the provider to be recovered&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Write offs&lt;/Summary&gt;&#xA;    &lt;Description&gt;Provider to write off amounts&lt;/Description&gt;&#xA;  &lt;/TableName&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;Summary&gt;Total&lt;/Summary&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Delay sap:VirtualizedContainerService.HintSize="625.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_3">
       <InArgument x:TypeArguments="x:TimeSpan">
         <Literal x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="00:00:05" />
       </InArgument>
     </Delay>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InvNumUpdate_Remittance_OAC_Smart.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WorkFlow Files\InvNumUpdate_Remittance_OAC_Smart.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InvNumUpdate_Remittance_OAC_Smart.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WorkFlow Files\InvNumUpdate_Remittance_OAC_Smart.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtOverallClaims_Valid">[dtOverAllClaims_Valid]</OutArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFilteredRemittanceData">[dtRemittanceData]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtOverallClaims_Valid">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtOverAllClaims_Valid" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFilteredRemittanceData">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtRemittanceData" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Filter_StatementOfAccountReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WorkFlow Files\Filter_StatementOfAccountReport.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Filter_StatementOfAccountReport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="WorkFlow Files\Filter_StatementOfAccountReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtSOA">[dtSOA]</OutArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRemittanceData">[dtRemittanceData]</InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtStatementOfSummary">[dtStatementOfSummary]</OutArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtValidOverAllClaims">[dtValidOverallClaims]</OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtSOA">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtSOA" />
+        </OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRemittanceData">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtRemittanceData" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtStatementOfSummary">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtStatementOfSummary" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtValidOverAllClaims">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtValidOverallClaims" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartReport">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtSmartReport" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtExceptionalReport">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtExceptionalReport" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_23" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RemittanceMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WorkFlow Files\RemittanceMatchStatus.xaml">
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="625.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_23" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RemittanceMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="WorkFlow Files\RemittanceMatchStatus.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtStatement">[dtStatementOfSummary]</InArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllClaimsValid">[dtValidOverallClaims]</InOutArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRemittanceData">[dtRemittanceData]</InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtRmtInvNotMatched">[dtRmtInvNotMatched]</OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtStatement">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtStatementOfSummary" />
+        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllClaimsValid">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtValidOverallClaims" />
+        </InOutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRemittanceData">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtRemittanceData" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtRmtInvNotMatched">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtRmtInvNotMatched" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strPaidKETotal">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="strPaidKETotal" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="OverAllClaimsMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="OverAllClaimsMatchStatus.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="OverAllClaimsMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="WorkFlow Files\OverAllClaimsMatchStatus.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtRmtInvNotMatched">
           <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtRmtInvNotMatched" />
@@ -234,81 +230,78 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtBenefitsExhausted">
           <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtBenefitsExhausted" />
         </OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartReport">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtSmartReport" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strBenefitsTotalSum">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="BenefitsTotalSum" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strDecMissingDocTotal">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="DecMissingDocTotal" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strDecNonClinicalTotal">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="DecNonClinicalTotal" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strDecMiscTotal">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="DecMiscTotal" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Output_SmartReport_Sequence" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_96">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SmartReportMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="SmartReportMatchStatus.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllNotMatched">[dtOverAllNotMatched]</InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartInvoiceNotMatched">[dtSmartInvoiceNotMatched]</OutArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartInvAmtMatched">[dtSmartInvAmtMatched]</OutArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-    </Sequence>
-    <Sequence DisplayName="Output_ExceptionReport_Sequence" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_97">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExceptionReportMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="ExceptionReportMatchStatus.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartInvoiceNotMatched">[dtSmartInvoiceNotMatched]</InArgument>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtExceptionInvoiceNotMatched">[dtExceptionInvoiceNotMatched]</OutArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-    </Sequence>
-    <Sequence DisplayName="Create Pivot Sequence" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_101">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreatePivotTables.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="CreatePivotTables.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtBenefitsExhausted">[dtBenefitsExhausted]</InArgument>
-          <OutArgument x:TypeArguments="x:Double" x:Key="out_strPaidKETotal">[PaidKETotal]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strBenefitsTotalSum">[BenefitsTotalSum]</OutArgument>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtDecMissingDoc">[dtDecMissingDoc]</InArgument>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtDecNonClinical">[dtDecNonClinical]</InArgument>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtDecMisc">[dtDecMisc]</InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strDecMiscTotal">[DecMiscTotal]</OutArgument>
-          <OutArgument x:TypeArguments="x:Double" x:Key="out_strDecNonClinicalTotal">[DecNonClinicalTotal]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strDecMissingDocTotal">[DecMissingDocTotal]</OutArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strRemittanceTotal">[RemittanceTotal]</OutArgument>
-          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartInvAmtMatched">[dtSmartInvAmtMatched]</InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_strOMETotalSum">[OMETotalSum]</OutArgument>
-          <OutArgument x:TypeArguments="x:Double" x:Key="out_strUntracedTotal">[dblUntracedTotal]</OutArgument>
-          <OutArgument x:TypeArguments="x:Double" x:Key="out_strReqStatusTotal">[dblReqStatusTotal]</OutArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-    </Sequence>
-    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="449.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_20" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - Summary" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SmartReportMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="WorkFlow Files\SmartReportMatchStatus.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtOverAllNotMatched">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtOverAllNotMatched" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartInvoiceNotMatched">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtSmartInvoiceNotMatched" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtSmartInvAmtMatched">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtSmartInvAmtMatched" />
+        </OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartReport">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtSmartReport" />
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtExceptionalReport">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtExceptionalReport" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_OMETotalSum">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="OMETotalSum" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ExceptionReportMatchStatus.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="WorkFlow Files\ExceptionReportMatchStatus.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtSmartInvoiceNotMatched">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtSmartInvoiceNotMatched" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtExceptionInvoiceNotMatched">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dtExceptionInvoiceNotMatched" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_dblUntracedTotal">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="dblUntracedTotal" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="625.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_20" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - Summary" sap:VirtualizedContainerService.HintSize="625.6,7672.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,7746.4" sap2010:WorkflowViewState.IdRef="Sequence_56">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,7546.4" sap2010:WorkflowViewState.IdRef="Sequence_56">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,7634.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" WorkbookPath="Output\StatementSummary.xlsx">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,7434.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" WorkbookPath="Output\StatementSummary.xlsx">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,7364.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,7164.8" sap2010:WorkflowViewState.IdRef="Sequence_57">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -344,7 +337,7 @@
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[dblUntracedTotal]" />
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[DecMissingDocTotal]" />
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[DecNonClinicalTotal]" />
-                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G11&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_14" Value="[PaidKETotal]">
+                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G11&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_14" Value="[strPaidKETotal]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -354,7 +347,6 @@
                     </ueab:WriteCellX>
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_12" Value="[DecMiscTotal]" />
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_32" Value="[dblReqStatusTotal]" />
-                    <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_33" Value="[OMETotalSum]" />
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;E27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_9" Value="[&quot;=SUM(E11:E26)&quot;]" />
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;F27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_10" Value="[&quot;=SUM(F11:F26)&quot;]" />
                     <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Summary&quot;).Cell(&quot;G27&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteCellX_11" Value="[&quot;=SUM(G11:G26)&quot;]" />
@@ -384,56 +376,11 @@
       </ueab:ExcelProcessScopeX.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="449.6,52.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_29" InstanceCachePeriod="3000" WorkbookPath="Output\RemittanceMatchStatus.xlsx">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="545.6,1189.6" sap2010:WorkflowViewState.IdRef="Sequence_105">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="483.2,1077.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_28" InstanceCachePeriod="3000" WorkbookPath="Input\FilteredStatementOfAccount.xlsx">
-              <ui:ExcelApplicationScope.Body>
-                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,968" sap2010:WorkflowViewState.IdRef="Sequence_104">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelWriteCell Cell="R1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_53" SheetName="Statement" Text="Comments" />
-                    <ui:ExcelWriteCell Cell="S1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_54" SheetName="Statement" Text="Paid" />
-                    <ui:ExcelWriteCell Cell="T1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_55" SheetName="Statement" Text="Variance" />
-                    <ui:ExcelWriteCell Cell="U1" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_56" SheetName="Statement" Text="Other Comments" />
-                    <ui:ExcelWriteCell Cell="[&quot;S2:S&quot;+(dtSOA.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_57" SheetName="Statement" Text="[&quot;=IF(ISNA(VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$Q,16,FALSE)),&quot;&quot;AmountNotFound&quot;&quot;,VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$Q,16,FALSE))&quot;]" />
-                    <ui:ExcelWriteCell Cell="[&quot;T2:T&quot;+(dtSOA.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_58" SheetName="Statement" Text="[&quot;=IFERROR(L2-S2,&quot;&quot;NA&quot;&quot;)&quot;]" />
-                    <ui:ExcelWriteCell Cell="[&quot;U2:U&quot;+(dtSOA.Rows.Count+1).ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="387.2,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_59" SheetName="Statement" Text="[&quot;=IF(ISNA(VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$P,15,FALSE)),&quot;&quot;NA&quot;&quot;,VLOOKUP(B2,[RemittanceMatchStatus.xlsx]InvoiceMatched!$B:$P,15,FALSE))&quot;]" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ExcelApplicationScope.Body>
-            </ui:ExcelApplicationScope>
-          </Sequence>
-        </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:ExcelApplicationScope>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="449.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process EXCEL" sap:VirtualizedContainerService.HintSize="625.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
   </Sequence>
 </Activity>

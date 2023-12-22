@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="seqCopyFilteredTemplates" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,1295.2" sap2010:WorkflowViewState.IdRef="seqCopyFilteredTemplates_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="seqCopyFilteredTemplates" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,1880.8" sap2010:WorkflowViewState.IdRef="seqCopyFilteredTemplates_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -62,7 +62,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="seqCopyFilteredTemplates" sap:VirtualizedContainerService.HintSize="449.6,1230.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="seqCopyFilteredTemplates" sap:VirtualizedContainerService.HintSize="449.6,1816" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -73,6 +73,9 @@
     <ui:CopyFile ContinueOnError="{x:Null}" Destination="Input\FilteredStatementOfAccount.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="387.2,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="Excel Template\FilteredStatementOfAccount.xlsx" />
     <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\RemittanceMatchStatus.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="387.2,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_4" Overwrite="True" Path="Excel Template\RemittanceMatchStatus.xlsx" />
     <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\OverallClaimMatchStatus.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="387.2,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_5" Overwrite="True" Path="Excel Template\OverallClaimMatchStatus.xlsx" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\SmartReportMatchStatus.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="387.2,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_6" Overwrite="True" Path="Excel Template\SmartReportMatchStatus.xlsx" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\ExceptionReportMatchStatus.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="387.2,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_7" Overwrite="True" Path="Excel Template\ExceptionReportMatchStatus.xlsx" />
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="Output\StatementSummary.xlsx" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="387.2,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_8" Overwrite="True" Path="Excel Template\StatementSummary.xlsx" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Templates are Copied to Output &amp; Input folders&quot;]" />
   </Sequence>
 </Activity>
