@@ -27,6 +27,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strOEMLtoDeal&Sequence_1",
         "strPaidKETotal&Sequence_1",
         "dtOverAllClaims_Valid&Sequence_1",
         "dtExceptionalReport&Sequence_1",
@@ -51,7 +52,6 @@
         "RemittanceTotal&Sequence_1",
         "OMETotalSum&Sequence_1",
         "dblUntracedTotal&Sequence_1",
-        "dblReqStatusTotal&Sequence_1",
         "dtValidOverallClaims&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -151,6 +151,7 @@
         "dtPartiallyPaid&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_dtValidStatusData",
         "out_strDecMiscTotal",
         "out_strDecNonClinicalTotal",
         "out_strDecMissingDocTotal",
