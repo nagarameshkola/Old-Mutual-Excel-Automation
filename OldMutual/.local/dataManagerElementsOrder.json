@@ -59,17 +59,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Test.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "Sum&Sequence_1",
-        "dtRemittanceData&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "WorkFlow Files/InvNumUpdate_Remittance_OAC_Smart.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -102,39 +91,14 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "CreatePivotTables.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [
-        "out_strReqStatusTotal",
-        "in_dtBenefitsExhausted",
-        "out_strPaidKETotal",
-        "out_strBenefitsTotalSum",
-        "in_dtDecMissingDoc",
-        "in_dtDecNonClinical",
-        "in_dtDecMisc",
-        "out_strDecMiscTotal",
-        "out_strDecNonClinicalTotal",
-        "out_strDecMissingDocTotal",
-        "out_strRemittanceTotal",
-        "in_dtSmartInvAmtMatched",
-        "out_strOMETotalSum",
-        "out_strUntracedTotal"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "WorkFlow Files/RemittanceMatchStatus.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "ListValidOverClaimsRemittNonInvMatch&Sequence_1",
         "ListValidOverClaimsArAmount&Sequence_1",
         "dtValida_BuildDataTable&Sequence_1",
-        "strOverallClaimInvMatchvsInvNotMatched&Sequence_16",
         "dtRmtInvNotMatched&Sequence_1",
         "strRemNotmatchedvsValidOverallClaims&Sequence_19",
-        "strOverallClaimInvMatchvsPartiallyPaid&Sequence_16",
         "strInvVsOverallValidClaims&Sequence_13",
         "dtFullyPaid&Sequence_1",
         "dtPartiallyPaid&Sequence_1",
@@ -222,20 +186,6 @@
       "Path": "WorkFlow Files/seqCopyFilteredTemplates.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "WorkFlow Files/seqVlookupPaidto.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dtRemittanceMatch&Sequence_1",
-        "dtFiltStatOfAcc&Sequence_1",
-        "CurrentIndex&Sequence_1",
-        "strPaidTo&Sequence_2",
-        "strOtherComments&Sequence_2"
-      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
