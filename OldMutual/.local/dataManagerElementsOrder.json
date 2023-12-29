@@ -27,6 +27,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strSudanMemberCounts&Sequence_1",
+        "strRwadaMembersCount&Sequence_1",
+        "strUgandaMembersCount&Sequence_1",
+        "dtSudanMembers&Sequence_1",
+        "dtRwandaMembers&Sequence_1",
+        "dtUgandaMembers&Sequence_1",
         "strOEMLtoDeal&Sequence_1",
         "strPaidKETotal&Sequence_1",
         "dtOverAllClaims_Valid&Sequence_1",
@@ -176,6 +182,12 @@
         "dtExceptionInvoiceMatched&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_strSudanMembersCount",
+        "out_strRwadaMembersCount",
+        "out_strUgandaMembersCount",
+        "out_dtSudanMembers",
+        "out_dtRwandaMembers",
+        "out_dtUgandaMembers",
         "out_dblUntracedTotal",
         "in_dtSmartInvoiceNotMatched",
         "out_dtExceptionInvoiceNotMatched"
